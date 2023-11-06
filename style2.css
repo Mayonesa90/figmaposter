@@ -18,9 +18,8 @@ header {
 
 header h1 {
     place-self: center;
-    grid-row-start: 8;
     font-size: 102px;
-    color: white;
+    color: black;
 }
 
 .navIcon {
@@ -29,8 +28,8 @@ header h1 {
 }
 
 .ninjaHead {
-    place-self: center;
-    grid-row-end: 20;
+    justify-self: center;
+    align-self: flex-end;
 }
 
 .smaller {
