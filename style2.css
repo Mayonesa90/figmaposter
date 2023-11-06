@@ -4,13 +4,14 @@ body {
 
 .wrapper {
     display: grid;
+    background-color: black;
     grid-template-columns: repeat(6, auto);
-    grid-template-rows: repeat(65, 32px);
+    grid-template-rows: 608px 1fr auto;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
    }
 
 header {
-    grid-area: 1/1/20/7;
+    grid-area: 1/1/2/7;
     background-color: #3DE07E;
     display: grid;
 }
@@ -19,6 +20,7 @@ header h1 {
     place-self: center;
     grid-row-start: 8;
     font-size: 102px;
+    color: white;
 }
 
 .navIcon {
@@ -31,26 +33,93 @@ header h1 {
     grid-row-end: 20;
 }
 
-main {
-    grid-row: auto;
-    grid-column:;
-    background-color: #000000;
+.smaller {
+    display: grid;
+    grid-area: 20/1/1fr/7;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    padding: 5em 10em 5em 10em;
+    gap: 32px;
 }
 
 article {
-    width: 312px;
-    height: 543px;
+    width: 1fr;
+    height: 1fr;
     grid-area: span 2;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+
+}
+
+.bigger {
+    grid-area: 7/1/8/4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 32px;
+    padding: 0 10em 5em 10em;
+}
+
+.bigger article {
+    background-color: white;
+}
+
+.bigger img {
+    width: 19em;
+}
+
+.bigger button {
+    margin-left: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+.bigger p, .bigger h3 {
+    color: black;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.bigger p {
+    margin-bottom: 3em;
+}
+
 main img {
-    width: 312px
+    width: 12em;
 }
 
 footer {
     background-color: #333333;
+    grid-area: 56/1/66/7;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2em 10em 5em 10em
+}
+
+p, h3, li {
+    color: #ffff;
 }
 
 p {
-    color: #ffff;
+    font-size: 12px;
 }
+
+h3 {
+    font-size: 1.5em;
+}
+
+button {
+    border-radius: 4px;
+    background-color: #E83F57;
+    color: white;
+    border-style: none;
+    padding: 10px;
+    font-weight: bold;
+}
+
+
+
