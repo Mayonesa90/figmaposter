@@ -6,7 +6,7 @@ body {
     display: grid;
     background-color: black;
     grid-template-columns: repeat(6, auto);
-    grid-template-rows: 608px 1fr auto;
+    grid-template-rows: 80vh 1fr auto;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
    }
 
@@ -18,8 +18,9 @@ header {
 
 header h1 {
     place-self: center;
-    font-size: 102px;
+    font-size: 4em;
     color: black;
+    justify-self: center;
 }
 
 .navIcon {
@@ -34,47 +35,51 @@ header h1 {
 
 .smaller {
     display: grid;
-    grid-area: 20/1/1fr/7;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, 20vw);
     grid-template-rows: repeat(3, auto);
-    padding: 5em 10em 5em 10em;
-    gap: 32px;
+    gap: 5vw;
+    justify-content: center;
 }
 
 article {
-    width: 1fr;
-    height: 1fr;
-    grid-area: span 2;
 }
 
 main {
     display: flex;
     flex-direction: column;
     background-color: black;
+    justify-content: center;
+    padding: 10vw 5vw;
+    grid-area: 2/1/3/7;
 
 }
 
 .bigger {
     grid-area: 7/1/8/4;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 32.5vw 32.5vw;
     grid-template-rows: 1fr;
-    column-gap: 32px;
-    padding: 0 10em 5em 10em;
+    gap: 5vw;
+    padding-top: 5vw;
+    justify-content: center;
 }
 
 .bigger article {
     background-color: white;
 }
 
+.smaller img {
+    width: 100%;
+}
+
 .bigger img {
-    width: 19em;
+    width: 100%;
 }
 
 .bigger button {
-    margin-left: 15px;
-    margin-bottom: 15px;
-    padding: 15px;
+    margin-left: 1em;
+    margin-bottom: 1em;
+    padding: 1em;
 }
 
 .bigger p, .bigger h3 {
@@ -87,16 +92,13 @@ main {
     margin-bottom: 3em;
 }
 
-main img {
-    width: 12em;
-}
-
 footer {
     background-color: #333333;
     grid-area: 3/1/4/7;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 2em 10em 5em 10em
+    padding: 5vw 15vw;
+    justify-content: center;
 }
 
 p, h3, li {
@@ -104,11 +106,11 @@ p, h3, li {
 }
 
 p {
-    font-size: 12px;
+    font-size: 1vw;
 }
 
 h3 {
-    font-size: 1.5em;
+    font-size: 3vw;
 }
 
 button {
@@ -116,9 +118,45 @@ button {
     background-color: #E83F57;
     color: white;
     border-style: none;
-    padding: 10px;
+    padding: 0.5em;
     font-weight: bold;
+    font-size: 1vw;
 }
 
+@media screen and (max-width: 600px) {
+    button {font-size: 2vw;}
+    p {font-size: 2vw;}
+    .smaller {
+        display: grid;
+        grid-template-columns: repeat(3, 25vw);
+        grid-template-rows: repeat(3, auto);
+        gap: 3vw;
+        justify-content: center;
+    }
+    .bigger {
+        grid-area: 7/1/8/4;
+        display: grid;
+        grid-template-columns: 38vw 38vw;
+        grid-template-rows: 1fr;
+        gap: 3vw;
+        padding-top: 32px;
+        justify-content: center;
+    }
+    h3 {
+        font-size: 2.4vw;
+    }
+    .ninjaHead {
+        width: 21vw;
+    }
+    .wrapper {
+        grid-template-rows: 30vh 1fr auto;
+    }
+    header h1 {
+        font-size: 10vw;
+    }
+    footer img {
+        width: 3vw;
+    }
+}
 
 
